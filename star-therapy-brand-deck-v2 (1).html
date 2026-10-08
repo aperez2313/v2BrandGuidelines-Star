@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <title>Star Therapy Solutions — Brand Direction v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream:#F7F3EC;
+      --paper:#FFFDF9;
+      --sand:#EFE6D6;
+      --ink:#1C1A17;
+      --body:#5C5144;
+      --bronze:#8A6840;
+      --line:rgba(28,26,23,.1);
+      --shadow:0 16px 40px rgba(28,26,23,.08);
+      --coral:#E88978;
+      --cobalt:#3559A6;
+      --mustard:#E3B423;
+      --sky:#8FCBE3;
+      --kelly:#3E9A55;
+      --forest:#3E6B45;
+      --poppy:#D24B45;
+      --butter:#F3D56A;
+      --blush:#F0C2B4;
+      --nav:rgba(247,243,236,.94);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:74px}
+    body{margin:0;background:var(--cream);color:var(--body);font-family:"Nunito Sans",sans-serif;font-size:17px;line-height:1.6}
+    button{font:inherit}
+    a{color:inherit}
+    button:focus-visible,a:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+    .nav{position:sticky;top:0;z-index:20;background:var(--nav);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center;gap:22px;padding:12px 24px}
+    .brand{font-family:"Fredoka",sans-serif;font-weight:600;color:var(--ink);white-space:nowrap}
+    .nav ol{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex:1;justify-content:flex-end;flex-wrap:wrap}
+    .nav a{display:grid;place-items:center;min-width:34px;height:32px;padding:0 8px;border-radius:99px;text-decoration:none;font-size:12px;font-weight:800;color:var(--body)}
+    .nav a:hover,.nav a[aria-current="true"]{background:var(--ink);color:var(--cream)}
+    .slide{padding:92px 28px;border-bottom:1px solid var(--line);scroll-margin-top:64px}
+    .slide.alt{background:#F3EEE4}
+    .inner{max-width:1100px;margin:0 auto}
+    .no{display:flex;align-items:center;gap:12px;margin-bottom:22px;color:var(--bronze);font:600 20px/1 "Caveat",cursive}
+    .no::after{content:"";width:36px;height:1px;background:currentColor;opacity:.5}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Fredoka",sans-serif;color:var(--ink);font-weight:600;letter-spacing:-.02em}
+    h1{font-size:clamp(46px,7vw,78px);line-height:.98;margin-bottom:18px;max-width:780px}
+    h2{font-size:clamp(32px,4.6vw,50px);line-height:1.08;margin-bottom:16px}
+    h3{font-size:22px;line-height:1.25;margin-bottom:8px}
+    .lede{font-size:clamp(18px,2.2vw,23px);line-height:1.5;max-width:760px;color:var(--body)}
+    .eyebrow{font:600 22px/1 "Caveat",cursive;color:var(--cobalt);margin-bottom:10px}
+    .cover{min-height:calc(100vh - 56px);display:flex;align-items:center;background:
+      linear-gradient(160deg,var(--cream) 0 58%, #EFE7D8 58% 100%)}
+    .cover .inner{width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;font-size:13px;font-weight:800;color:var(--body)}
+    .meta span+span::before{content:"·";margin-right:10px;color:var(--coral)}
+    .prepared{margin-top:36px;font-size:15px}
+    .prepared strong{color:var(--ink)}
+    .tile-board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .tile{aspect-ratio:1;border-radius:6px;display:grid;place-items:center;color:#fff;font-family:"Fredoka",sans-serif;font-weight:600;font-size:13px;text-align:center;padding:8px;line-height:1.15}
+    .tile.ink{color:var(--ink)}
+    .kicker{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze);margin-bottom:8px}
+    .split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;margin-top:36px;align-items:start}
+    .points{display:grid;gap:0}
+    .point{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+    .num{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:14px}
+    .note{background:var(--ink);color:var(--cream);border-radius:24px;padding:32px;box-shadow:var(--shadow)}
+    .note .eyebrow{color:var(--butter)}
+    .note p{font:500 26px/1.3 "Fredoka",sans-serif;color:var(--cream);margin:0}
+    .note small{display:block;margin-top:18px;color:rgba(247,243,236,.72);font-size:14px}
+    .words{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:36px 0 28px}
+    .word{min-height:150px;border-radius:18px;padding:22px;display:flex;align-items:flex-end;font:600 clamp(32px,4vw,48px)/1 "Fredoka",sans-serif;color:var(--ink)}
+    .principles{display:grid;grid-template-columns:1fr 1fr;gap:22px 40px}
+    .principle{border-top:3px solid var(--ink);padding-top:14px}
+    .principle strong{display:block;font-family:"Fredoka",sans-serif;color:var(--ink);font-size:20px;margin-bottom:4px}
+    .principle p{margin:0}
+    .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
+    .swatch{border:0;background:var(--paper);border-radius:16px;overflow:hidden;text-align:left;padding:0;cursor:pointer;box-shadow:0 1px 0 var(--line);border:1px solid var(--line)}
+    .swatch:hover{transform:translateY(-2px)}
+    .chip{height:88px}
+    .swatch div{padding:12px 14px 14px}
+    .swatch strong{display:block;font-family:"Fredoka",sans-serif;color:var(--ink);font-size:16px}
+    .swatch code{font-size:12px;font-weight:800;color:var(--bronze)}
+    .swatch small{display:block;margin-top:4px;font-size:13px;color:var(--body);line-height:1.35}
+    .ratio{display:flex;height:64px;border-radius:999px;overflow:hidden;margin-top:18px;border:4px solid var(--paper);box-shadow:var(--shadow)}
+    .ratio span{display:grid;place-items:center;font-size:13px;font-weight:800;color:var(--ink)}
+    .legend{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:12px;margin-top:10px;font-size:13px;font-weight:700}
+    .rules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+    .rule{background:var(--paper);border-radius:16px;padding:18px;border:1px solid var(--line)}
+    .rule strong{display:block;font-family:"Fredoka",sans-serif;color:var(--ink);margin-bottom:4px}
+    .rule p{margin:0;font-size:15px}
+    .map{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+    .map article{background:var(--paper);border-radius:18px;padding:18px;border:1px solid var(--line)}
+    .dot{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:800;margin-bottom:12px}
+    .dot.ink{color:var(--ink)}
+    .map strong{font-family:"Fredoka",sans-serif;color:var(--ink)}
+    .map p{margin:4px 0 0;font-size:14px}
+    .type-card{background:var(--paper);border-radius:22px;padding:28px;border:1px solid var(--line);margin-top:22px}
+    .type-card.rec{border:2px solid var(--ink)}
+    .badge{display:inline-block;background:var(--mustard);color:var(--ink);font-size:12px;font-weight:800;border-radius:99px;padding:5px 10px;margin-bottom:10px}
+    .specimen{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+    .specimen h3{font-size:34px;margin-bottom:8px}
+    .specimen p{margin:0;max-width:640px}
+    .btn{border:0;border-radius:999px;padding:13px 20px;font-weight:800;color:#fff;background:var(--poppy);cursor:pointer}
+    .btn.alt{background:transparent;color:var(--cobalt);border:2px solid var(--cobalt)}
+    .pair-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    .panel{background:var(--sand);border-radius:18px;padding:22px}
+    table{width:100%;border-collapse:collapse}
+    td,th{text-align:left;padding:8px 4px;border-bottom:1px solid var(--line);font-size:14px}
+    td:last-child,th:last-child{text-align:right;font-weight:800;color:var(--ink)}
+    .logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .stage{background:var(--paper);border-radius:22px;min-height:280px;display:grid;place-items:center;border:1px solid var(--line);padding:28px}
+    .lock{text-align:center;color:var(--ink)}
+    .lock b{display:block;margin-top:8px;font-family:"Fredoka",sans-serif;letter-spacing:.12em;font-size:18px}
+    .star{width:92px;height:92px}
+    .donts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .dont{border-top:4px solid var(--poppy);padding-top:10px;font-size:14px}
+    .home{display:grid;gap:10px;margin-top:28px}
+    .row{display:grid;grid-template-columns:54px 1fr auto;gap:16px;align-items:center;background:var(--paper);border-radius:16px;padding:16px 18px;border:1px solid var(--line)}
+    .row b{font-family:"Fredoka",sans-serif;color:var(--ink);font-size:18px}
+    .row p{margin:2px 0 0;font-size:14px}
+    .tag{font-size:12px;font-weight:800;border-radius:99px;padding:6px 10px;background:var(--sand)}
+    .lab{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+    .card{background:var(--paper);border-radius:20px;padding:22px;border:1px solid var(--line)}
+    .label{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--bronze);margin-bottom:14px}
+    .service{background:var(--sand);border-radius:16px;padding:18px}
+    .icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:800;margin-bottom:10px}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    .check{border-radius:16px;padding:16px;background:var(--paper);border:1px solid var(--line)}
+    .check.do{border-top:5px solid var(--kelly)}
+    .check.dont{border-top:5px solid var(--poppy)}
+    .check .lbl{font-size:12px;font-weight:800;margin-bottom:8px}
+    .do .lbl{color:var(--forest)}
+    .dont .lbl{color:var(--poppy)}
+    ol.steps{list-style:none;padding:0;margin:28px 0 0;counter-reset:s}
+    ol.steps li{counter-increment:s;display:grid;grid-template-columns:46px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+    ol.steps li::before{content:counter(s);width:40px;height:40px;border-radius:12px;background:var(--mustard);display:grid;place-items:center;font-family:"Fredoka",sans-serif;color:var(--ink)}
+    ol.steps strong{display:block;font-family:"Fredoka",sans-serif;color:var(--ink)}
+    .close{margin-top:28px;background:var(--cobalt);color:#fff;border-radius:22px;padding:26px 28px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .close strong{font:600 26px/1.2 "Fredoka",sans-serif}
+    .toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,12px);opacity:0;background:var(--ink);color:#fff;padding:10px 16px;border-radius:99px;font-weight:800;font-size:14px;transition:.2s;pointer-events:none}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:860px){
+      .cover .inner,.split,.principles,.rules,.map,.pair-row,.logo-grid,.lab,.checks,.words{grid-template-columns:1fr}
+      .swatches{grid-template-columns:1fr 1fr}
+      .specimen,.close,.row{grid-template-columns:1fr;display:grid}
+      .nav ol{display:none}
+      .slide{padding:72px 18px}
+      .tile-board{max-width:320px}
+    }
+    @media print{
+      .nav,.toast{display:none!important}
+      .slide{break-before:page;padding:12mm}
+      .slide:first-child{break-before:auto}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Deck sections">
+    <div class="nav-inner">
+      <div class="brand">Star Therapy · v2</div>
+      <ol>
+        <li><a href="#cover">01</a></li>
+        <li><a href="#read">02</a></li>
+        <li><a href="#essence">03</a></li>
+        <li><a href="#color">04</a></li>
+        <li><a href="#jobs">05</a></li>
+        <li><a href="#type">06</a></li>
+        <li><a href="#logo">07</a></li>
+        <li><a href="#home">08</a></li>
+        <li><a href="#system">09</a></li>
+        <li><a href="#next">10</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <section class="slide cover" id="cover">
+      <div class="inner">
+        <div>
+          <p class="eyebrow">Brand direction · version 2</p>
+          <h1>More color. Same calm.</h1>
+          <p class="lede">A brighter identity for Star Therapy Solutions, pulled from the co-design cover: saturated tiles on a quiet cream page. Built for pediatric speech pathology and occupational therapy.</p>
+          <div class="meta"><span>October 2026</span><span>Miami Lakes</span><span>Speech + OT</span></div>
+          <p class="prepared">Prepared for <strong>Andre</strong> · Star Therapy Solutions</p>
+        </div>
+        <div class="tile-board" aria-hidden="true">
+          <div class="tile" style="background:#E88978">Speech</div>
+          <div class="tile" style="background:#3559A6">OT</div>
+          <div class="tile ink" style="background:#E3B423">Team</div>
+          <div class="tile ink" style="background:#8FCBE3">School</div>
+          <div class="tile" style="background:#3E9A55">Play</div>
+          <div class="tile" style="background:#D24B45">CTA</div>
+          <div class="tile ink" style="background:#F3D56A">Hope</div>
+          <div class="tile" style="background:#3E6B45">Trust</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="read">
+      <div class="inner">
+        <div class="no">02 · The shift</div>
+        <h2>The cover is colorful because the color is boxed.</h2>
+        <p class="lede">The art of co-design does not paint the whole page. Cream stays cream. Type stays near-black. Every bright hue lives inside a square. That is the rule to borrow — not a rainbow background.</p>
+        <div class="split">
+          <div class="points">
+            <div class="point"><span class="num" style="background:#E88978">1</span><div><h3>Keep the cream field</h3><p>The book’s off-white is doing the calming work. Star Therapy should do the same with #F7F3EC.</p></div></div>
+            <div class="point"><span class="num" style="background:#3559A6">2</span><div><h3>Give each service a tile color</h3><p>Speech gets coral. Occupational therapy gets cobalt. Parents learn the code without reading a legend.</p></div></div>
+            <div class="point"><span class="num" style="background:#E3B423;color:#1C1A17">3</span><div><h3>Use mustard as warmth, not warning</h3><p>Team, highlights, and small “you are here” marks. Never body text.</p></div></div>
+            <div class="point"><span class="num" style="background:#3E9A55">4</span><div><h3>One action color</h3><p>Poppy red is the only button color, matching the cover’s loudest tile. Everything else is identity, not conversion.</p></div></div>
+          </div>
+          <aside class="note">
+            <p class="eyebrow">Creative director’s note</p>
+            <p>Match the book’s structure, not its subject matter. Quiet page. Loud squares. Friendly type.</p>
+            <small>Bronze stays for the star mark so the logo still feels like Star Therapy, not a children’s textbook.</small>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide alt" id="essence">
+      <div class="inner">
+        <div class="no">03 · Essence</div>
+        <h2>Warm, clear, a little playful.</h2>
+        <div class="words">
+          <div class="word" style="background:#F0C2B4">Warm</div>
+          <div class="word" style="background:#8FCBE3">Clear</div>
+          <div class="word" style="background:#E3B423">Playful</div>
+        </div>
+        <div class="principles">
+          <div class="principle"><strong>Parents are the reader</strong><p>Color can be cheerful. Copy stays plain: what we do, where we go, how to start.</p></div>
+          <div class="principle"><strong>One job per tile</strong><p>A color means a category. Speech, OT, school visits, insurance, team. Do not remix them inside one card.</p></div>
+          <div class="principle"><strong>Squares for color, pills for action</strong><p>Tiles and icon chips hold the palette. Buttons stay fully rounded so they never look like another tile.</p></div>
+          <div class="principle"><strong>Clinical, not clinical-looking</strong><p>This is speech pathology and occupational therapy. Skip baby clip-art. Use real rooms, real hands, real play.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="color">
+      <div class="inner">
+        <div class="no">04 · Palette from the cover</div>
+        <h2>Eight tiles. One cream page.</h2>
+        <p class="lede">Sampled from the co-design grid and softened just enough for a therapy site. Click any swatch to copy the hex.</p>
+        <div class="swatches">
+          <button class="swatch" data-hex="#F7F3EC"><span class="chip" style="background:#F7F3EC"></span><div><strong>Page cream</strong><code>#F7F3EC</code><small>Cover field. All page backgrounds.</small></div></button>
+          <button class="swatch" data-hex="#1C1A17"><span class="chip" style="background:#1C1A17"></span><div><strong>Cover ink</strong><code>#1C1A17</code><small>Headlines only. Not body copy.</small></div></button>
+          <button class="swatch" data-hex="#E88978"><span class="chip" style="background:#E88978"></span><div><strong>Tile coral</strong><code>#E88978</code><small>Speech pathology. First cover tile.</small></div></button>
+          <button class="swatch" data-hex="#3559A6"><span class="chip" style="background:#3559A6"></span><div><strong>Tile cobalt</strong><code>#3559A6</code><small>Occupational therapy. Trust tile.</small></div></button>
+          <button class="swatch" data-hex="#E3B423"><span class="chip" style="background:#E3B423"></span><div><strong>Mustard</strong><code>#E3B423</code><small>Team and highlight tiles.</small></div></button>
+          <button class="swatch" data-hex="#8FCBE3"><span class="chip" style="background:#8FCBE3"></span><div><strong>Sky tile</strong><code>#8FCBE3</code><small>School visits and location.</small></div></button>
+          <button class="swatch" data-hex="#3E9A55"><span class="chip" style="background:#3E9A55"></span><div><strong>Kelly</strong><code>#3E9A55</code><small>Play, progress, growth.</small></div></button>
+          <button class="swatch" data-hex="#D24B45"><span class="chip" style="background:#D24B45"></span><div><strong>Poppy</strong><code>#D24B45</code><small>The only CTA color.</small></div></button>
+        </div>
+        <h3 style="margin-top:36px">How much color</h3>
+        <div class="ratio" aria-label="Color proportion">
+          <span style="width:62%;background:#F7F3EC">62% cream</span>
+          <span style="width:18%;background:#1C1A17;color:#fff">18% ink</span>
+          <span style="width:20%;background:linear-gradient(90deg,#E88978,#3559A6,#E3B423,#3E9A55);color:#fff">20% tiles</span>
+        </div>
+        <div class="legend"><span>Quiet page</span><span>Type and star</span><span>Contained color</span></div>
+        <div class="rules">
+          <div class="rule"><strong>Never a full-bleed accent</strong><p>No cobalt hero, no mustard section background. Color stops at the tile edge.</p></div>
+          <div class="rule"><strong>Two tile colors per section</strong><p>A services row can show coral and cobalt. It should not also show kelly, mustard, and poppy.</p></div>
+          <div class="rule"><strong>White type on cobalt, kelly, poppy</strong><p>Mustard, sky, and coral get ink type. Do not put white on mustard.</p></div>
+          <div class="rule"><strong>Body stays warm gray-brown</strong><p>#5C5144 on cream. Ink is for headings so the page does not go harsh.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide alt" id="jobs">
+      <div class="inner">
+        <div class="no">05 · Color jobs</div>
+        <h2>Each color answers one parent question.</h2>
+        <div class="map">
+          <article><div class="dot" style="background:#E88978">SP</div><strong>Speech pathology</strong><p>Communication, language, feeding support. Coral tile and coral icon chip only.</p></article>
+          <article><div class="dot" style="background:#3559A6">OT</div><strong>Occupational therapy</strong><p>Daily skills, sensory, school routines. Cobalt tile and cobalt icon chip only.</p></article>
+          <article><div class="dot ink" style="background:#8FCBE3">GO</div><strong>We come to school</strong><p>Miami Lakes, Hialeah, Palm Springs North. Sky marks location, not a service.</p></article>
+          <article><div class="dot ink" style="background:#E3B423">US</div><strong>The team</strong><p>Therapist photos sit on mustard tiles, like the cover’s portrait squares.</p></article>
+          <article><div class="dot" style="background:#3E9A55">OK</div><strong>Progress</strong><p>How-it-works steps and small wins. Kelly is encouragement, not a third service.</p></article>
+          <article><div class="dot" style="background:#D24B45">GO</div><strong>Start</strong><p>Poppy is “call Victoria” and nothing else. If everything is red, nothing is.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="type">
+      <div class="inner">
+        <div class="no">06 · Type</div>
+        <h2>Friendly display. Plain body. Like the cover’s confidence, softer.</h2>
+        <article class="type-card rec">
+          <span class="badge">Use this</span>
+          <div class="kicker">Fredoka 600 + Nunito Sans 400/700 · Caveat for eyebrows only</div>
+          <div class="specimen">
+            <div>
+              <h3>Speech and OT, at school or in Miami Lakes.</h3>
+              <p>Pediatric speech pathology and occupational therapy for families who want a clear next step — not a brochure full of jargon.</p>
+            </div>
+            <button class="btn" type="button">Call Victoria</button>
+          </div>
+        </article>
+        <div class="pair-row">
+          <div class="panel">
+            <h3>Scale</h3>
+            <table>
+              <tr><td>Display</td><td>56 / 62</td></tr>
+              <tr><td>H1</td><td>40 / 48</td></tr>
+              <tr><td>H2</td><td>28 / 36</td></tr>
+              <tr><td>Body</td><td>17 / 28</td></tr>
+              <tr><td>Button</td><td>16 / semibold</td></tr>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>Rules</h3>
+            <p>Sentence case. No all-caps headlines. Caveat for a short eyebrow or a pull quote, never a paragraph. Buttons are pills. Tile labels can be short and bold.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide alt" id="logo">
+      <div class="inner">
+        <div class="no">07 · Star mark</div>
+        <h2>The star stays bronze. The color lives beside it.</h2>
+        <div class="logo-grid">
+          <div class="stage">
+            <div class="lock">
+              <svg class="star" viewBox="0 0 100 100" aria-hidden="true"><path fill="#8A6840" d="M50 6 61 36 94 37 68 57 77 90 50 72 23 90 32 57 6 37 39 36z"/></svg>
+              <b>STAR THERAPY<br>SOLUTIONS</b>
+            </div>
+          </div>
+          <div>
+            <div class="rule"><strong>Mark</strong><p>Star Bronze #8A6840 on cream. Do not recolor the star coral or cobalt — those colors already mean services.</p></div>
+            <div class="rule" style="margin-top:12px"><strong>Lockup with tiles</strong><p>On social, the star can sit as one tile in a 2×2 grid with speech, OT, and school. On the website, it stands alone.</p></div>
+            <div class="donts">
+              <div class="dont"><strong>Don’t</strong> put the star on a photo without a cream plate.</div>
+              <div class="dont"><strong>Don’t</strong> scatter tiny stars. One mark, large.</div>
+              <div class="dont"><strong>Don’t</strong> stretch the wordmark to fill a tile.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="home">
+      <div class="inner">
+        <div class="no">08 · Homepage</div>
+        <h2>Six sections. Color only where it teaches.</h2>
+        <div class="home">
+          <div class="row"><span class="dot ink" style="background:#E3B423;margin:0">01</span><div><b>Hero</b><p>Ink headline, one therapy photo with 8px corners, poppy pill: Call Victoria · 305-778-6144.</p></div><span class="tag">No tile field</span></div>
+          <div class="row"><span class="dot ink" style="background:#8FCBE3;margin:0">02</span><div><b>Where we go</b><p>Three sky chips: Miami Lakes · Hialeah · Palm Springs North.</p></div><span class="tag">Sky</span></div>
+          <div class="row"><span class="dot" style="background:#E88978;margin:0">03</span><div><b>Two services</b><p>Speech pathology on coral. Occupational therapy on cobalt. Nothing else in this row.</p></div><span class="tag">Coral + cobalt</span></div>
+          <div class="row"><span class="dot" style="background:#3E9A55;margin:0">04</span><div><b>How it works</b><p>School visit → Miami Lakes office → we handle insurance. Kelly step numbers.</p></div><span class="tag">Kelly</span></div>
+          <div class="row"><span class="dot ink" style="background:#E3B423;margin:0">05</span><div><b>Team</b><p>Therapist photos cropped into mustard squares, cover-style. Names in Fredoka.</p></div><span class="tag">Mustard</span></div>
+          <div class="row"><span class="dot" style="background:#D24B45;margin:0">06</span><div><b>Contact</b><p>Victoria Perez · 305-778-6144 · Instagram @startherapysolutions. One poppy button.</p></div><span class="tag">Poppy</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide alt" id="system">
+      <div class="inner">
+        <div class="no">09 · Components</div>
+        <h2>Build these four. Reuse them.</h2>
+        <div class="lab">
+          <div class="card">
+            <div class="label">BUTTONS</div>
+            <button class="btn" type="button">Call Victoria</button>
+            <button class="btn alt" type="button" style="margin-left:8px">View services</button>
+          </div>
+          <div class="card">
+            <div class="label">SERVICE TILE</div>
+            <div class="service">
+              <div class="icon" style="background:#E88978">SP</div>
+              <h3>Speech pathology</h3>
+              <p style="margin:0">Play-based support for language, speech sounds, and connection.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="label">OT TILE</div>
+            <div class="service">
+              <div class="icon" style="background:#3559A6">OT</div>
+              <h3>Occupational therapy</h3>
+              <p style="margin:0">Everyday skills, sensory needs, and school routines.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="label">DO / DON’T</div>
+            <div class="checks" style="margin-top:0">
+              <div class="check do"><div class="lbl">DO</div>Color inside a square or chip. Cream everywhere else.</div>
+              <div class="check dont"><div class="lbl">DON’T</div>A full section washed in coral, or five accents in one card.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="next">
+      <div class="inner">
+        <div class="no">10 · Next</div>
+        <h2>Lock the tiles, then rebuild the hero.</h2>
+        <ol class="steps">
+          <li><div><strong>Adopt the eight hex values</strong><span>Cream, ink, coral, cobalt, mustard, sky, kelly, poppy. Bronze only on the star.</span></div></li>
+          <li><div><strong>Assign the jobs and do not swap them</strong><span>Speech = coral. OT = cobalt. Schools = sky. Team = mustard. Buttons = poppy.</span></div></li>
+          <li><div><strong>Rebuild the hero on cream</strong><span>One photo, one headline, one poppy button. No star wallpaper.</span></div></li>
+          <li><div><strong>Add the two service tiles</strong><span>If those two cards feel like the book cover, the system is working.</span></div></li>
+          <li><div><strong>Show Victoria the pair</strong><span>Current page versus this lighter, tiled version. One choice, not ten tweaks.</span></div></li>
+        </ol>
+        <div class="close">
+          <strong>Start with the two service tiles.</strong>
+          <span>That is the co-design idea in one row: cream page, two loud squares, a clear next step.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" role="status">Copied</div>
+  <script>
+    (function(){
+      var toast=document.querySelector('.toast');
+      var timer;
+      document.querySelectorAll('.swatch').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          var hex=btn.getAttribute('data-hex');
+          var done=function(){toast.textContent=hex+' copied';toast.classList.add('show');clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove('show');},1400);};
+          if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(hex).then(done).catch(done);} else done();
+        });
+      });
+      var links=[].slice.call(document.querySelectorAll('.nav a'));
+      if('IntersectionObserver' in window){
+        var obs=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(!entry.isIntersecting) return;
+            links.forEach(function(a){a.removeAttribute('aria-current');});
+            var active=document.querySelector('.nav a[href="#'+entry.target.id+'"]');
+            if(active) active.setAttribute('aria-current','true');
+          });
+        },{rootMargin:'-30% 0px -60% 0px'});
+        document.querySelectorAll('.slide').forEach(function(s){obs.observe(s);});
+      }
+    })();
+  </script>
+</body>
+</html>
